@@ -1,0 +1,95 @@
+/* some colors you may find useful:
+  #115ff4
+  #060ce9
+  #28a200
+  #8d2ab5
+  #74119c
+*/
+/* found how to center the body on stackoveflow: https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center */
+@font-face {
+  font-family: 'gyparody_rg';
+  src: url('gyparody_rg.ttf');
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+
+body {
+  display: table-cell;
+  vertical-align: middle;
+}
+/* found how to display gridlines on stackoverflow: https://stackoverflow.com/questions/1763032/html-css-table-with-gridlines */
+table {
+  text-align: center;
+  background-color: #060ce9;
+  color: white;
+  border-collapse: collapse;
+  border: 1px solid white;
+  table-layout: fixed;
+  width: 200px;
+}
+
+th,
+td {
+  padding: 2em;
+  width: 150px;
+  border-color: white;
+  border-spacing: 100px;
+  border: 1px solid white;
+  width: 100px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#start,
+#reset {
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  background-color: #115ff4;
+  display: block;
+  margin: auto;
+  font-size: 30px;
+  font-family: 'gyparody_rg';
+}
+
+/* found on codepen.io: https://codepen.io/cbhoweth/pen/GJYWye */
+/* create spinner for loading api */
+
+#loading-bar-spinner.spinner {
+  left: 50%;
+  margin-left: -20px;
+  top: 50%;
+  margin-top: -20px;
+  position: absolute;
+  z-index: 19 !important;
+  animation: loading-bar-spinner 400ms linear infinite;
+}
+
+#loading-bar-spinner.spinner .spinner-icon {
+  width: 40px;
+  height: 40px;
+  border: solid 4px transparent;
+  border-top-color: #00c8b1 !important;
+  border-left-color: #00c8b1 !important;
+  border-radius: 50%;
+}
+
+@keyframes loading-bar-spinner {
+  0% {
+    transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
