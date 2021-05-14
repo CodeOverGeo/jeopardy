@@ -5,20 +5,27 @@
   #8d2ab5
   #74119c
 */
-/* found how to center the body on stackoveflow: https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center */
+
+/* found font : https://www.azfonts.net/load_font/gyparody-rg-regular.html */
+
 @font-face {
   font-family: 'gyparody_rg';
   src: url('gyparody_rg.ttf');
 }
 
+/* found how to center the body on stackoveflow: https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center */
+
 html {
   display: table;
   margin: auto;
+  height: 100%;
 }
 
 body {
   display: table-cell;
   vertical-align: middle;
+  min-height: 100%;
+  background: linear-gradient(#8d2ab5, #115ff4);
 }
 /* found how to display gridlines on stackoverflow: https://stackoverflow.com/questions/1763032/html-css-table-with-gridlines */
 table {
@@ -26,7 +33,7 @@ table {
   background-color: #060ce9;
   color: white;
   border-collapse: collapse;
-  border: 1px solid white;
+  border: 2px solid black;
   table-layout: fixed;
   width: 200px;
 }
@@ -35,16 +42,21 @@ th,
 td {
   padding: 2em;
   width: 150px;
-  border-color: white;
+  border-color: black;
   border-spacing: 100px;
-  border: 1px solid white;
+  border: 2px solid black;
   width: 100px;
   height: 50px;
   overflow: hidden;
 }
 
+td {
+  background-color: #28a200;
+}
+
 .pointer {
   cursor: pointer;
+  background-color: #060ce9;
 }
 
 #start,
